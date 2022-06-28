@@ -1,5 +1,19 @@
 /*ayuda*/
 
+.mainAyuda{
+    grid-area: mainAyuda;
+}
+
+.cuerpoAyuda{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    row-gap: 80px;
+    grid-template-areas: "header"
+                         "mainAyuda"
+                         "footer";
+}
+
 .barraNavegacion {
     display: flex;
     flex-direction: row;
@@ -64,6 +78,26 @@
 }
 
 /*contacto*/
+
+@media (max-width:550px){
+    .btn{
+        min-width: 65px;
+    }
+}
+
+.mainContacto{
+    grid-area: main;
+}
+
+.cuerpoContacto{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    row-gap: 80px;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+}
 
 .contenedorLoco {
     display: flex;
@@ -171,10 +205,6 @@
     font-size: 24px;
 }
 
-.headerProductos{
-    grid-area: header;
-}
-
 .cuerpoProductos{
     display: grid;
     grid-template-columns: auto;
@@ -241,7 +271,7 @@ ul, li{
     grid-template-areas: "menuIzq productosGrid" 
                          "menuIzq productosGrid";
     grid-area: main;
-    
+    justify-content: center;
 }
 
 .contenedorProductos {
@@ -307,7 +337,67 @@ ul, li{
     height: 44px;
 }
 
+.botonCategorias{
+    display: none;
+}
+
+@media (max-width:780px){
+    .botonCategorias{
+        display: block;
+    }
+
+    .lateralJs{
+        display: none;
+    }
+
+    .menuLateral{
+        height: fit-content;
+        grid-area: menuJs;
+    }
+
+    #productos{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "menuJs" "desplegable" "productoJs";
+        row-gap: 30px;
+    }
+
+    .contenedorProductos{
+        grid-area: productoJs;
+    }
+
+}
+
+.menuJs{
+    flex-direction: column;
+    border: 1px solid black;
+    width: fit-content;
+    grid-area: desplegable;
+    margin-left: 80px;
+}
+
+@media (min-width:779px){
+    .menuJs{
+        display: none !important;
+    }
+}
+
 /*quienes somos*/
+
+.textoSomos{
+    max-height: 500px;
+}
+
+.cuerpoSomos{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "header"
+                         "mainSomos"
+                         "aos1"
+                         "aos2"
+                         "footer";
+}
 
 #sobreNosotros {
     display: flex;
@@ -327,6 +417,9 @@ ul, li{
     align-self: flex-end;
     margin-right: 40px;
     height: 600px;
+    grid-area: aos2;
+    margin-bottom: 150px;
+    margin-left: 30px;
 }
 
 .somosRow p {
@@ -336,7 +429,7 @@ ul, li{
 
 .somosRow img {
     border: 2px black solid;
-    height: 400px;
+    height: 60%;
     width: 30%;
 }
 
@@ -377,6 +470,8 @@ ul, li{
     width: 100%;
     background-image: url(../imagenes/carpintero.jpg);
     background-size: cover;
+    grid-area: mainSomos;
+    margin-bottom: 80px;
 }
 
 .imagenSomos {
@@ -396,6 +491,53 @@ ul, li{
     align-self: flex-start;
     margin-left: 40px;
     height: 600px;
+    grid-area: aos1;
+
+}
+
+@media (max-width:800px){
+    .contenedorQuienesSomos{
+        margin-bottom: 0px;
+    }
+
+    .somosRow{
+        flex-direction: column;
+        max-height: 900px;
+        
+    }
+    
+    .imagenSomos{
+        margin: 0%;
+    }
+
+    .somosRow p{
+        margin-bottom: 0%;
+        width: 70%;
+    }
+
+    .somosRow img{
+        width: 50%;
+        height: 200px;
+        margin-bottom: 45px;
+    }
+
+    .somosRow2{
+        flex-direction: column;
+        max-height: 900px;
+        justify-content: center;
+    }
+
+    .somosRow2 p{
+        margin-bottom: 0%;
+        width: 70%;
+        margin-right: 0%;
+    }
+
+    .somosRow2 img{
+        width: 50%;
+        height: 200px;
+        margin-top: 45px;
+    }
 }
 
 /* footer */

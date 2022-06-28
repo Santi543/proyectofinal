@@ -7,3 +7,12 @@ const displayMenu = () =>{
         menu.style.display = "none"
     }
 }
+
+const displaymenuJs = () =>{
+    const menuJs = document.getElementById("menuJs")
+    if(menuJs.style.display == "none"){
+        menuJs.style.display = "flex"
+    }else{
+        menuJs.style.display = "none"
+    }
+}

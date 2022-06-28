@@ -19,15 +19,15 @@
 <body>
     <div class="cuerpoProductos">
         <!-- inicio del header -->
-        <header class="headerProductos">
+        <header>
             <!-- inicio del logo -->
-            
+
             <!-- fin del logo -->
             <!-- inicio del nav -->
             <nav class="navegacion">
                 <div class="contenedor">
                     <a href="index.html"><img src="../imagenes/nuevoLogo.png" alt="" class="logo"></a>
-    
+
                 </div>
                 <ul class="barraNavegacion">
                     <li><a href="../index.html">Home</a></li>
@@ -37,65 +37,107 @@
                     <li><a href="ayuda.html">Ayuda</a></li>
                 </ul>
                 <img src="../imagenes/menu.png" alt="" class="menuNav" onclick="displayMenu()">
-                
-  
+
+
             </nav>
-  
+
             <div class="menu" id="menu">
-              <ul class="menuMobile">
-                <li><a href="../index.html">Home</a></li>
-                <hr/>
-                <li><a href="productos.html">Productos</a></li>
-                <hr/>
-                <li><a href="contacto.html">Contacto</a></li>
-                <hr/>
-                <li><a href="quienessomos.html">Quienes Somos</a></li>
-                <hr/>
-                <li><a href="ayuda.html">Ayuda</a></li>
-              </ul>
+                <ul class="menuMobile">
+                    <li><a href="../index.html">Home</a></li>
+                    <hr />
+                    <li><a href="productos.html">Productos</a></li>
+                    <hr />
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <hr />
+                    <li><a href="quienessomos.html">Quienes Somos</a></li>
+                    <hr />
+                    <li><a href="ayuda.html">Ayuda</a></li>
+                </ul>
             </div>
             <!-- fin del nav -->
         </header>
         <!-- fin del header -->
         <!-- inicio de productos -->
         <article id="productos">
-            <div class="menuLateral">
-                <div class="categorias">
-                    <h2>Categorias</h2>
-                    <ul class="lateral">
-                        <li class="estilo" onclick="buscandoProductos('Sillones')">-Sillones</li>
-                        <li class="estilo">-Sillas</li>
-                        <li class="estilo">-Placards</li>
-                        <li class="estilo">-Cajones</li>
-                    </ul>
-                </div>
-                <div class="categorias">
-                    <h2>Condicion</h2>
-                    <ul class="lateral">
-                        <li class="estilo">-Nuevo</li>
-                        <li class="estilo">-Usado</li>
-                    </ul>
-                </div>
-                <div class="categorias">
-                    <h2>Precio</h2>
-                    <ul class="lateral">
-                        <li class="estilo">-Hasta $10.000</li>
-                        <li class="estilo">-$10.000 a $30.000</li>
-                        <li class="estilo">-Mas de $30.000</li>
-                    </ul>
-                    <div class="inputs">
-                        <label>$<input type="number" style="max-width: 75px;"></label>
-                        -
-                        <label>$<input type="number" style="max-width: 75px;"></label>
-                        <svg class="svg-icon" viewBox="0 0 20 20">
-                            <path
-                                d="M12.522,10.4l-3.559,3.562c-0.172,0.173-0.451,0.176-0.625,0c-0.173-0.173-0.173-0.451,0-0.624l3.248-3.25L8.161,6.662c-0.173-0.173-0.173-0.452,0-0.624c0.172-0.175,0.451-0.175,0.624,0l3.738,3.736C12.695,9.947,12.695,10.228,12.522,10.4 M18.406,10c0,4.644-3.764,8.406-8.406,8.406c-4.644,0-8.406-3.763-8.406-8.406S5.356,1.594,10,1.594C14.643,1.594,18.406,5.356,18.406,10M17.521,10c0-4.148-3.374-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.147,17.521,17.521,14.147,17.521,10">
-                            </path>
-                        </svg>
-                    </div>
+                <div class="menuLateral">
+                    <div class="lateralJs">
+                        <div class="categorias">
+                            <h2>Categorias</h2>
+                            <ul class="lateral">
+                                <li class="estilo">-Sillones</li>
+                                <li class="estilo">-Sillas</li>
+                                <li class="estilo">-Placards</li>
+                                <li class="estilo">-Cajones</li>
+                            </ul>
+                        </div>
+                        <div class="categorias">
+                            <h2>Condicion</h2>
+                            <ul class="lateral">
+                                <li class="estilo">-Nuevo</li>
+                                <li class="estilo">-Usado</li>
+                            </ul>
+                        </div>
+                        <div class="categorias">
+                            <h2>Precio</h2>
+                            <ul class="lateral">
+                                <li class="estilo">-Hasta $10.000</li>
+                                <li class="estilo">-$10.000 a $30.000</li>
+                                <li class="estilo">-Mas de $30.000</li>
+                            </ul>
+                            <div class="inputs">
+                                <label>$<input type="number" style="max-width: 75px;"></label>
+                                -
+                                <label>$<input type="number" style="max-width: 75px;"></label>
+                                <svg class="svg-icon" viewBox="0 0 20 20">
+                                    <path
+                                        d="M12.522,10.4l-3.559,3.562c-0.172,0.173-0.451,0.176-0.625,0c-0.173-0.173-0.173-0.451,0-0.624l3.248-3.25L8.161,6.662c-0.173-0.173-0.173-0.452,0-0.624c0.172-0.175,0.451-0.175,0.624,0l3.738,3.736C12.695,9.947,12.695,10.228,12.522,10.4 M18.406,10c0,4.644-3.764,8.406-8.406,8.406c-4.644,0-8.406-3.763-8.406-8.406S5.356,1.594,10,1.594C14.643,1.594,18.406,5.356,18.406,10M17.521,10c0-4.148-3.374-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.147,17.521,17.521,14.147,17.521,10">
+                                    </path>
+                                </svg>
+                            </div>
 
+                        </div>
+                    </div>
+                    <button onclick="displaymenuJs()" class="botonCategorias">Ver categorias</button>
                 </div>
-            </div>
+
+                <div class="menuJs" id="menuJs">
+                    <div class="categorias">
+                        <h2>Categorias</h2>
+                        <ul class="lateral">
+                            <li class="estilo">-Sillones</li>
+                            <li class="estilo">-Sillas</li>
+                            <li class="estilo">-Placards</li>
+                            <li class="estilo">-Cajones</li>
+                        </ul>
+                    </div>
+                    <div class="categorias">
+                        <h2>Condicion</h2>
+                        <ul class="lateral">
+                            <li class="estilo">-Nuevo</li>
+                            <li class="estilo">-Usado</li>
+                        </ul>
+                    </div>
+                    <div class="categorias">
+                        <h2>Precio</h2>
+                        <ul class="lateral">
+                            <li class="estilo">-Hasta $10.000</li>
+                            <li class="estilo">-$10.000 a $30.000</li>
+                            <li class="estilo">-Mas de $30.000</li>
+                        </ul>
+                        <div class="inputs">
+                            <label>$<input type="number" style="max-width: 75px;"></label>
+                            -
+                            <label>$<input type="number" style="max-width: 75px;"></label>
+                            <svg class="svg-icon" viewBox="0 0 20 20">
+                                <path
+                                    d="M12.522,10.4l-3.559,3.562c-0.172,0.173-0.451,0.176-0.625,0c-0.173-0.173-0.173-0.451,0-0.624l3.248-3.25L8.161,6.662c-0.173-0.173-0.173-0.452,0-0.624c0.172-0.175,0.451-0.175,0.624,0l3.738,3.736C12.695,9.947,12.695,10.228,12.522,10.4 M18.406,10c0,4.644-3.764,8.406-8.406,8.406c-4.644,0-8.406-3.763-8.406-8.406S5.356,1.594,10,1.594C14.643,1.594,18.406,5.356,18.406,10M17.521,10c0-4.148-3.374-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.147,17.521,17.521,14.147,17.521,10">
+                                </path>
+                            </svg>
+                        </div>
+
+                    </div>
+                </div>
+        
 
             <div class="contenedorProductos">
                 <div class="producto">
@@ -225,4 +267,5 @@
 </body>
 <script>         const buscandoProductos = (producto) => { alert(`Buscando ${producto}`) }     </script>
 <script src="../nav.js"></script>
+
 </html>

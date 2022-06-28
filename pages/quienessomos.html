@@ -17,11 +17,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tai+Heritage+Pro&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="cuerpo">
+    <div class="cuerpoSomos">
         <!-- inicio del header -->
         <header>
             <!-- inicio del nav -->
@@ -37,8 +37,24 @@
                     <li><a href="quienessomos.html">Quienes Somos</a></li>
                     <li><a href="ayuda.html">Ayuda</a></li>
                 </ul>
-
+                <img src="../imagenes/menu.png" alt="" class="menuNav" onclick="displayMenu()">
+                
+  
             </nav>
+  
+            <div class="menu" id="menu">
+              <ul class="menuMobile">
+                <li><a href="../index.html">Home</a></li>
+                <hr/>
+                <li><a href="productos.html">Productos</a></li>
+                <hr/>
+                <li><a href="contacto.html">Contacto</a></li>
+                <hr/>
+                <li><a href="quienessomos.html">Quienes Somos</a></li>
+                <hr/>
+                <li><a href="ayuda.html">Ayuda</a></li>
+              </ul>
+            </div>
             <!-- fin del nav -->
         </header>
         <!-- fin del header -->
@@ -52,19 +68,20 @@
 
 
                 <!-- libreria AOS -->
+        
                 <div class="somosRow" data-aos="fade-right">
                     <img src="../imagenes/quienesSomos.jpg" alt="" class="imagenSomos">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatibus omnis in dolore
+                    <p class="textoSomos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatibus omnis in dolore
                         corrupti tenetur, veniam neque repellendus aspernatur earum excepturi maiores quasi molestiae
-                        aliquam officiis debitis. Voluptas, ratione laudantium!</p>
+                        aliquam officiis.</p>
                 </div>
                 <div class="somosRow2" data-aos="fade-up">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate laudantium ipsa, quis harum
-                        sit obcaecati maiores velit ipsam, magni odit distinctio accusamus in. Quo culpa fugit officiis
-                        autem ullam quae!</p>
+                    <p class="textoSomos">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate laudantium ipsa, quis harum
+                        sit obcaecati maiores velit ipsam, magni odit distinctio accusamus in</p>
                     <img src="../imagenes/quienesSomos2.jpg" alt="" class="imagenSomos">
 
                 </div>
+        
                 <!-- fin libreria AOS -->
 
 
@@ -100,5 +117,6 @@
 <script>
     AOS.init();
 </script>
+<script src="../nav.js"></script>
 
 </html>
