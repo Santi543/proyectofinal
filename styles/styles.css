@@ -18,22 +18,38 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 40px;
+    height: 80px;
     margin: 0%;
     align-items: center;
+    padding: 0%;
+    margin-left: 40px;
 }
 
 .barraNavegacion li {
     display: flex;
-    margin-right: 70px;
+    width: 170px;
     list-style: none;
     text-align: center;
     padding: 0%;
+    align-items: center;
+    justify-items: center;
+    height: 50px;
 }
 
-.barraNavegacion li:hover {
+.barraNavegacion li a:hover {
     margin-bottom: 5px;
-    border-bottom: 1.2px solid rgb(255, 255, 255);
+    border-bottom: 1.6px solid rgb(255, 255, 255);
+    animation-name: subrayado;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+}
+
+@keyframes subrayado{
+    0%{width: 10px;}
+    25%{width: 20}
+    50%{width: 30px}
+    75%{width: 40px;}
+    100%{width: 60px}
 }
 
 .barraNavegacion li a {
@@ -245,7 +261,6 @@
     height: 80%;
     border-right: 1px solid lightgray;
     font-family: 'Raleway', sans-serif;
-    margin-left: 20px;
     min-width: 18%
 }
 
@@ -300,7 +315,93 @@ ul, li{
     }
 }
 
-.producto {
+.productoUno img:hover{
+    transform: scaleX(-1);
+}
+
+.productoDos img:hover{
+    content: url(../imagenes/muebleAbierto.jpg);
+}
+
+.productoTres img:hover{
+    content: url(../imagenes/placardBlanco2.jpg);
+}
+
+.productoCuatro img:hover{
+    content: url(../imagenes/sillon2.jpg);
+}
+
+.productoCinco img:hover{
+    content: url(../imagenes/sillaroja2.jpg);
+}
+
+.productoSeis img:hover{
+    content: url(../imagenes/bajomesada2.jpg);
+}
+
+.productoUno {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px lightgray solid;
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+
+
+.productoDos {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px lightgray solid;
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.productoTres {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px lightgray solid;
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.productoCuatro {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px lightgray solid;
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.productoCinco {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px lightgray solid;
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.productoSeis {
     display: flex;
     flex-direction: column;
     max-width: 320px;
@@ -339,6 +440,15 @@ ul, li{
 
 .botonCategorias{
     display: none;
+    height: 50px;
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.botonCategorias:hover{
+    border: 2px solid rgb(184, 16, 16);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.4s;
 }
 
 @media (max-width:780px){
@@ -373,7 +483,7 @@ ul, li{
     border: 1px solid black;
     width: fit-content;
     grid-area: desplegable;
-    margin-left: 80px;
+    width: 359px;
 }
 
 @media (min-width:779px){
